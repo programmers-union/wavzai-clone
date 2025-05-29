@@ -8,6 +8,8 @@ import Image from "next/image";
 import LuxurySeafoodSection from "@/components/SeafoodRestaurant";
 import RestaurantSection from "@/components/SeafoodRestaurant";
 import SeafoodRestaurant from "@/components/SeafoodRestaurant";
+import MenuShowcaseSection from "@/components/MenuSection";
+
 
 
 
@@ -19,6 +21,9 @@ export default function Home() {
 <ScrollZoomImage />
 <SeafoodFeature/>
  <SeafoodRestaurant />
+ <MenuShowcaseSection/>
+ 
+ 
 
 
 

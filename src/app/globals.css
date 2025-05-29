@@ -229,294 +229,198 @@ html {
 
 /* Carousel Section Styles */
 .carousel-section {
-  position: relative;
-  min-height: 150vh;
-  background: white;
-  overflow-x: hidden;
-  
-  margin: 0 auto;
-  width: 97%;
-}
+          position: relative;
+          min-height: 150vh;
+          background: white;
+          overflow-x: hidden;
+          margin: 0 auto;
+          width: 97%;
+        }
 
-.text-carousel {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 2rem 0;
-}
+        .text-carousel {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          padding: 2rem 0;
+        }
 
-.carousel-row {
-  display: flex;
-  white-space: nowrap;
-  font-size: 4rem;
-  font-weight: bold;
-  color: #dcdcdc;
-  animation: scroll-left 25s linear infinite;
-  transition: color 0.3s;
-  cursor: pointer;
-}
+        .carousel-row {
+          display: flex;
+          white-space: nowrap;
+          font-size: 4rem;
+          font-weight: bold;
+          color: #dcdcdc;
+          animation: scroll-left 25s linear infinite;
+          transition: color 0.3s ease;
+          cursor: pointer;
+        }
 
-.carousel-row.active {
-  color: #38c3f5;
-}
+        .carousel-row.active {
+          color: #38c3f5;
+        }
 
-.carousel-text {
-  margin-right: 2rem;
-  font-size: 6rem;
-}
+        .carousel-row:hover {
+          color: #38c3f5;
+        }
 
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
+        .carousel-text {
+          margin-right: 2rem;
+          font-size: 6rem;
+        }
 
-/* Sticky Card Styles */
-.sticky-card {
-  position: relative;
-  top: -28rem;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  
-}
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
 
-.card-content {
-  background: #001f4d;
-  color: white;
-  padding: 2rem;
-  border-radius: 20px;
-  width: 350px;
-  text-align: center;
-  transition: transform 0.4s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
+        .sticky-card {
+          position: relative;
+          position: relative;
+          top: -39rem;
+          z-index: 2;
+          display: flex;
+          justify-content: center;
+          width: 26%;
+          margin: 0 auto;
+        }
 
-.image-container {
-  margin-top: 1rem;
-}
+        .card-content {
+          background: #001f4d;
+          color: white;
+          padding: 2.5rem 2rem;
+          
+          width: 100%;
+          
+          transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+          display: flex;
+          flex-direction: column;
+        }
 
-.image-container img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-}
+        .card-content.transitioning-out {
+          transform: scale(0.95);
+        }
 
-/* Hover Interaction */
-.carousel-row:hover ~ .sticky-card .card-content {
-  transform: scale(1.05);
-}
+        .card-content.transitioning-in {
+          transform: scale(1.05);
+          animation: cardZoomIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
 
-@media (max-width: 768px) {
-  .carousel-row {
-    font-size: 2.5rem;
-  }
+        @keyframes cardZoomIn {
+          0% {
+            transform: scale(1.05);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
 
-  .card-content {
-    width: 90%;
-    padding: 1.5rem;
-  }
-}
+        .card-header {
+          margin-bottom: 1rem;
+        }
 
-.seafood-banner {
-  padding: 60px 0;
-  width: 100%;
-}
+        .card-number {
+          color: #ffffff;
+          font-size: 0.9rem;
+          font-weight: 300;
+          opacity: 0.8;
+        }
 
-.banner-categories {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
+        .card-title {
+          font-size: 2.5rem;
+          font-weight: 300;
+          margin: 1rem 0;
+          line-height: 1.2;
+          color: #ffffff;
+          transition: opacity 0.3s ease;
+        }
 
-.banner-category {
-  color: #0c2253;
-  font-size: 2rem;
-  font-weight: 500;
-  margin-right: 40px;
-  position: relative;
-}
+        .card-description {
+          font-size: 1rem;
+          line-height: 1.6;
+          color: #b8c5d6;
+          margin-bottom: 2rem;
+          flex-grow: 1;
+          transition: opacity 0.3s ease;
+        }
 
-.banner-category:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: -20px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: #0c2253;
-}
+        .image-container {
+          width: 100%;
+          aspect-ratio: 1;
+          border-radius: 12px;
+          overflow: hidden;
+          background: #f8f9fa;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: auto;
+        }
 
-.banner-title-container {
-  margin-bottom: 30px;
-}
+        .food-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          transition: transform 0.3s ease;
+        }
 
-.banner-title {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 11rem;
-  font-weight: 300;
-  line-height: 1.1;
-  color: #0c2253;
-  letter-spacing: -1px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 0rem 2rem;
-}
+        .card-content:hover .food-image {
+          transform: scale(1.05);
+        }
 
-.banner-subtitle {
-  font-size: 2rem;
-  font-weight: 300;
-  margin-top: 10px;
-  align-self: flex-end;
-}
+        .carousel-row:hover ~ .sticky-card .card-content {
+          transform: scale(1.02);
+        }
 
-.banner-action {
-  width: 100%;
-  margin-top: 20px;
-   margin: 0 auto;
-  padding: 0rem 2rem;
-}
+        /* Responsive Design */
+        @media (max-width: 991.98px) {
+          .card-content {
+            width: 320px;
+            min-height: 520px;
+            padding: 2rem 1.5rem;
+          }
+          
+          .card-title {
+            font-size: 2rem;
+          }
+        }
 
-.banner-btn {
-  display: inline-block;
-  background-color: #2980b9;
-  color: white;
-  padding: 15px 25px;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-decoration: none;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition: background-color 0.3s ease;
-}
+        @media (max-width: 768px) {
+          .carousel-row {
+            font-size: 2.5rem;
+          }
 
-.banner-btn::before {
-  content: "BOOK A TABLE";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
+          .card-content {
+            width: 90%;
+            max-width: 300px;
+            padding: 1.5rem;
+            min-height: 480px;
+          }
+          
+          .card-title {
+            font-size: 1.8rem;
+          }
+          
+          .card-description {
+            font-size: 0.9rem;
+          }
+        }
 
-.banner-btn span {
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-
-.banner-btn:hover {
-  background-color: #2980b9;
-}
-
-.banner-btn:hover span {
-  transform: translateY(-150%);
-  opacity: 0;
-}
-
-.banner-btn:hover::before {
-  top: 0;
-}
-
-/* Banner responsive styles */
-@media (max-width: 991.98px) {
-  .banner-title {
-    font-size: 4rem;
-  }
-  
-  .banner-subtitle {
-    font-size: 1.75rem;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .seafood-banner {
-    padding: 40px 0;
-  }
-  
-  .banner-category {
-    font-size: 1.1rem;
-    margin-right: 30px;
-  }
-  
-  .banner-category:not(:last-child)::after {
-    right: -15px;
-  }
-  
-  .banner-title {
-    font-size: 3rem;
-  }
-  
-  .banner-subtitle {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .banner-title {
-    font-size: 2.5rem;
-  }
-  
-  .banner-subtitle {
-    font-size: 1.25rem;
-    margin-top: 5px;
-  }
-  
-  .banner-category {
-    font-size: 1rem;
-    margin-right: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .banner-btn {
-    padding: 12px 30px;
-    font-size: 0.9rem;
-  }
-}
-
-.animate-right {
-  animation: slideInFromRight 1s ease-out forwards;
-}
-
-.animate-left {
-  animation: slideInFromLeft 1s ease-out forwards;
-}
-
-@keyframes slideInFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+        @media (max-width: 575.98px) {
+          .card-content {
+            min-height: 420px;
+          }
+          
+          .card-title {
+            font-size: 1.6rem;
+          }
+        }
 
 
 
@@ -558,16 +462,10 @@ html {
   max-width: 85%;
 }
 
-/* Button Styles */
-.banner-action {
-  margin-bottom: 3rem;
-}
-
 .banner-btn {
-  display: inline-block;
   background: #4299e1;
   color: white;
-  text-decoration: none;
+  border: none;
   padding: 1rem 2rem;
   border-radius: 50px;
   font-family: 'Inter', sans-serif;
@@ -575,16 +473,20 @@ html {
   font-size: 0.9rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(66, 153, 225, 0.3);
+  margin-bottom: 3rem;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .banner-btn:hover {
   background: #3182ce;
-  color: white;
-  text-decoration: none;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(66, 153, 225, 0.4);
+  color: white;
+  text-decoration: none;
 }
 
 .stats-container {
@@ -655,21 +557,18 @@ html {
 }
 
 /* Animation Styles */
-
-/* Title Animation - Slide Up */
-.hero-title.hidden-up {
+.hidden-up {
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.hero-title.animate-up {
+.animate-up {
   opacity: 1;
   transform: translateY(0);
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Left to Right Animation */
 .hidden-left {
   opacity: 0;
   transform: translateX(-50px);
@@ -682,54 +581,47 @@ html {
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Stagger the left animations */
-.hero-description.animate-left {
-  transition-delay: 0.2s;
-}
-
-.banner-action.animate-left {
-  transition-delay: 0.4s;
-}
-
-.stats-container.animate-left {
-  transition-delay: 0.6s;
-}
-
-/* Image Animation */
 .image-wrapper {
+  transform: scale(0.9);
   opacity: 0;
-  transform: scale(0.95);
   transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .image-wrapper.animate-image {
-  opacity: 1;
   transform: scale(1);
-  transition-delay: 0.3s;
+  opacity: 1;
 }
 
-/* Blue Overlay Animation */
 .image-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, #4299e1 0%, rgba(66, 153, 225, 0.7) 50%, transparent 100%);
-  z-index: 2;
-  transform: translateY(-100%);
-  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(66, 153, 225, 0.1), rgba(26, 54, 93, 0.1));
+  opacity: 0;
+  transition: opacity 0.8s ease;
 }
 
 .image-overlay.animate-overlay {
-  transform: translateY(100%);
-  transition-delay: 0.5s;
+  opacity: 1;
 }
 
-/* Counter Animation Styles */
-.stat-number {
-  position: relative;
-  overflow: hidden;
+/* Staggered animations for stats */
+.stats-container .col-6:nth-child(1) .stat-item {
+  transition-delay: 0.1s;
+}
+
+.stats-container .col-6:nth-child(2) .stat-item {
+  transition-delay: 0.2s;
+}
+
+.stats-container .col-6:nth-child(3) .stat-item {
+  transition-delay: 0.3s;
+}
+
+.stats-container .col-6:nth-child(4) .stat-item {
+  transition-delay: 0.4s;
 }
 
 /* Responsive Design */
@@ -778,11 +670,8 @@ html {
     margin-bottom: 2rem;
   }
   
-  .banner-action {
-    margin-bottom: 2rem;
-  }
-  
   .banner-btn {
+    margin-bottom: 2rem;
     padding: 0.8rem 1.5rem;
     font-size: 0.85rem;
   }
@@ -829,7 +718,6 @@ html {
   .banner-btn {
     width: 100%;
     padding: 1rem;
-    text-align: center;
   }
   
   .stats-container .col-6 {
@@ -851,69 +739,330 @@ html {
   .image-wrapper {
     height: 40vh;
   }
-
-  /* Mobile Animation Adjustments */
-  .hidden-left, .hidden-up {
-    transform: translateY(30px);
-  }
-  
-  .animate-left, .animate-up {
-    transform: translateY(0);
-  }
 }
 
-/* Additional Animation Enhancements */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
 }
 
-@keyframes slideInLeft {
-  from {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+[class*="col-"] {
+  padding: 0;
+}
+
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* bannerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
+
+/* Seafood Banner Styles */
+.seafood-banner {
+  padding: 60px 0px;
+  width: 99%;
+  margin-top: 6rem;
+}
+
+.banner-categories {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+      padding: 1rem 3rem
+}
+
+.banner-category {
+  color: #0c2253;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-right: 40px;
+  position: relative;
+}
+
+.banner-category:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #0c2253;
+}
+
+.banner-title-container {
+  margin-bottom: 30px;
+}
+
+.banner-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 11rem;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #0c2253;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0rem 2rem;
+}
+
+.banner-subtitle {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 10px;
+  align-self: flex-end;
+}
+
+.banner-action {
+  width: 100%;
+  margin-top: 20px;
+  margin: 0 auto;
+  padding: 0rem 2rem;
+}
+
+.banner-btn {
+  display: inline-block;
+  background-color: #2980b9;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.banner-btn::before {
+  content: "BOOK A TABLE";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.banner-btn span {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.banner-btn:hover {
+  background-color: #2980b9;
+}
+
+.banner-btn:hover span {
+  transform: translateY(-150%);
+  opacity: 0;
+}
+
+.banner-btn:hover::before {
+  top: 0;
+}
+
+/* Animation Classes */
+.animate-right {
+  animation: slideInFromRight 1s ease-out forwards;
+}
+
+.animate-left {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+@keyframes slideInFromRight {
+  0% {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(100px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-/* Hover Effects */
-.stat-item:hover .stat-number {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.stat-item:hover .stat-number::after {
-  transform: translateY(-50%) scale(1.2);
-  transition: all 0.3s ease;
+/* Responsive Design */
+@media (max-width: 991.98px) {
+  .banner-title {
+    font-size: 4rem;
+  }
+  
+  .banner-subtitle {
+    font-size: 1.75rem;
+  }
+  
+  .card-content {
+    width: 320px;
+    min-height: 520px;
+    padding: 2rem 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 2rem;
+  }
 }
 
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
+@media (max-width: 768px) {
+  .carousel-row {
+    font-size: 2.5rem;
+  }
+
+  .card-content {
+    width: 90%;
+    max-width: 300px;
+    padding: 1.5rem;
+    min-height: 480px;
+  }
+  
+  .card-title {
+    font-size: 1.8rem;
+  }
+  
+  .card-description {
+    font-size: 0.9rem;
+  }
 }
 
-/* Performance Optimizations */
-.image-wrapper,
-.hero-title,
-.hero-description,
-.banner-action,
-.stats-container {
-  will-change: transform, opacity;
+@media (max-width: 767.98px) {
+  .seafood-banner {
+    padding: 40px 0;
+  }
+  
+  .banner-category {
+    font-size: 1.1rem;
+    margin-right: 30px;
+  }
+  
+  .banner-category:not(:last-child)::after {
+    right: -15px;
+  }
+  
+  .banner-title {
+    font-size: 3rem;
+  }
+  
+  .banner-subtitle {
+    font-size: 1.5rem;
+  }
 }
 
-.image-wrapper.animate-image,
-.hero-title.animate-up,
-.animate-left {
-  will-change: auto;
+@media (max-width: 575.98px) {
+  .banner-title {
+    font-size: 2.5rem;
+  }
+  
+  .banner-subtitle {
+    font-size: 1.25rem;
+    margin-top: 5px;
+  }
+  
+  .banner-category {
+    font-size: 1rem;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .banner-btn {
+    padding: 12px 30px;
+    font-size: 0.9rem;
+  }
+  
+  .card-content {
+    min-height: 420px;
+  }
+  
+  .card-title {
+    font-size: 1.6rem;
+  }
 }
 
+.menu-section-title{
+  color:#0c2253 ;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+.menu-section{
+  position: relative;
+  padding: 0;
+}
 
+.menu-section-content {
+  height: 100vh;
+  display: flex;
+}
+
+.menu-section-image {
+  flex: 0 0 50%;
+  height: 100vh;
+}
+
+.menu-section-grid {
+
+    display: flex;
+  flex-wrap: wrap;
+
+ 
+}
+
+.menu-section-card img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.menu-section-left {
+  flex: 0 0 50%;
+  position: sticky;
+  top: 120px; /* Adjust to match your header height */
+  height: 100vh; /* full height minus header */
+  overflow: hidden;
+}
+
+ .menu-section-right {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto; /* Enables scrolling */
+  padding-left: 1rem;
+}
+     
+
+  
