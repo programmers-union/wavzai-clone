@@ -13,6 +13,8 @@ import SeafoodServices from "@/components/SeafoodServices";
 import AppetizersSection from "@/components/AppetizersSection";
 import SeafoodMenu from "@/components/SeafoodMenu";
 import ArticlesTestimonials from "@/components/ArticlesTestimonials";
+import ArticleBannerSection from "@/components/ArticleBannerSection";
+import BlogCarousel from "@/components/BlogCarousel";
 
 
 
@@ -32,6 +34,9 @@ export default function Home() {
  <SeafoodMenu/>
  </div>
  <ArticlesTestimonials/>
+ <ArticleBannerSection/>
+ <BlogCarousel/>
+  <BlogCarousel/>
  
  
  

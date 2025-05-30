@@ -1604,3 +1604,122 @@ html {
     width: 100%;
   }
 }
+
+
+.article-banner-section {
+  background-color: #f9f8f6;
+}
+
+.article-banner-section-title {
+  color: #001f5f; /* Deep navy */
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.3;
+  font-family: 'Georgia', serif; /* or your custom font if needed */
+}
+
+.article-banner-section-button {
+  background-color: #001f5f;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.article-banner-section-button:hover {
+  background-color: #00194d;
+}
+
+.blogcarousel-section {
+  background-color: #f8f9fa;
+}
+
+.blogcarousel-image-row {
+  transition: all 0.6s ease;
+  margin-bottom: 0;
+}
+
+.blogcarousel-image-container {
+  transition: transform 0.6s ease, opacity 0.4s ease;
+  opacity: 0.3;
+  transform: scale(0.9);
+}
+
+.blogcarousel-image-container.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.blogcarousel-image-container.active:hover .blogcarousel-image {
+  transform: scale(1.05);
+}
+
+.blogcarousel-image {
+  transition: transform 0.4s ease-in-out;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+/* Overlapping card */
+.blogcarousel-card {
+  max-width: 350px;
+  margin: -60px auto 1rem;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+  background: #fff;
+}
+
+.blogcarousel-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #00204a;
+}
+
+/* Arrow controls */
+.blogcarousel-arrows {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  gap: 10px;
+}
+
+.arrow-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 768px) {
+  .blogcarousel-image-container:not(.active) {
+    display: none;
+  }
+
+  .blogcarousel-card {
+    margin-top: 1rem;
+  }
+
+  .arrow-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blogcarousel-title {
+    font-size: 1.1rem;
+  }
+
+  .blogcarousel-card {
+    padding: 1.5rem;
+  }
+}
+
