@@ -36,7 +36,7 @@ export default function Home() {
  <ArticlesTestimonials/>
  <ArticleBannerSection/>
  <BlogCarousel/>
-  <BlogCarousel/>
+
  
  
  

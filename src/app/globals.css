@@ -1660,14 +1660,14 @@ html {
   transition: transform 0.4s ease-in-out;
   border-radius: 8px;
   width: 100%;
-  height: auto;
+ 
 }
 
 /* Overlapping card */
 .blogcarousel-card {
   max-width: 350px;
   margin: -60px auto 1rem;
-  border-radius: 12px;
+  border-radius: 12px;  
   position: relative;
   z-index: 2;
   background: #fff;
