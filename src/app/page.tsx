@@ -9,6 +9,10 @@ import LuxurySeafoodSection from "@/components/SeafoodRestaurant";
 import RestaurantSection from "@/components/SeafoodRestaurant";
 import SeafoodRestaurant from "@/components/SeafoodRestaurant";
 import MenuShowcaseSection from "@/components/MenuSection";
+import SeafoodServices from "@/components/SeafoodServices";
+import AppetizersSection from "@/components/AppetizersSection";
+import SeafoodMenu from "@/components/SeafoodMenu";
+import ArticlesTestimonials from "@/components/ArticlesTestimonials";
 
 
 
@@ -22,6 +26,14 @@ export default function Home() {
 <SeafoodFeature/>
  <SeafoodRestaurant />
  <MenuShowcaseSection/>
+ <SeafoodServices/>
+ <div className="container">
+  <AppetizersSection/>
+ <SeafoodMenu/>
+ </div>
+ <ArticlesTestimonials/>
+ 
+ 
  
  
 
