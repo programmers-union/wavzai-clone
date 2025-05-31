@@ -15,6 +15,7 @@ import SeafoodMenu from "@/components/SeafoodMenu";
 import ArticlesTestimonials from "@/components/ArticlesTestimonials";
 import ArticleBannerSection from "@/components/ArticleBannerSection";
 import BlogCarousel from "@/components/BlogCarousel";
+import ReservationSection from "@/components/ReservationSection";
 
 
 
@@ -36,17 +37,7 @@ export default function Home() {
  <ArticlesTestimonials/>
  <ArticleBannerSection/>
  <BlogCarousel/>
-
- 
- 
- 
- 
-
-
-
-
-
-
+ <ReservationSection/>
 
 
 </div>
