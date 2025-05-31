@@ -1831,6 +1831,7 @@ html {
   animation: fadeIn 0.3s ease-in-out;
   padding: 12px 24px;
   font-weight: 600;
+ 
 }
 
 @keyframes fadeIn {
@@ -1958,4 +1959,31 @@ html {
 
 .footer-section ul li {
   margin-bottom: 0.5rem;
+}
+
+
+/* header css.................. */
+
+  .icon-btn {
+  background-color: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #003087;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  line-height: 1;
 }
