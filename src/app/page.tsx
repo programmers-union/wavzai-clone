@@ -16,6 +16,7 @@ import ArticlesTestimonials from "@/components/ArticlesTestimonials";
 import ArticleBannerSection from "@/components/ArticleBannerSection";
 import BlogCarousel from "@/components/BlogCarousel";
 import ReservationSection from "@/components/ReservationSection";
+import InstaGallerySection from "@/components/InstaGallerySection";
 
 
 
@@ -38,6 +39,7 @@ export default function Home() {
  <ArticleBannerSection/>
  <BlogCarousel/>
  <ReservationSection/>
+ <InstaGallerySection/>
 
 
 </div>

@@ -111,11 +111,11 @@ export default function ReservationSection() {
                     alt={`plate-${config.name}`} 
                     width={config.size} 
                     height={config.size} 
-                    className=" plate rounded-circle"
+                    className=" rounded-circle"
                     style={{objectFit: 'cover'}}
                     onError={(e) => {
                       console.log(`Failed to load image ${i + 1}:`, src);
-                      e.currentTarget.src = `https://via.placeholder.com/180x180/000000/FFFFFF?text=Plate+${i + 1}`;
+                      e.currentTarget.src = `https://via.placeholder.com/${config.size}x${config.size}/000000/FFFFFF?text=Plate+${i + 1}`;
                     }}
                   />
                 </div>
