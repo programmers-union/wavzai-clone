@@ -389,6 +389,12 @@ html {
           .card-title {
             font-size: 2rem;
           }
+          .text-carousel {
+    display: none;
+  }
+  .sticky-card {
+    display: none !important;
+  }
         }
 
         @media (max-width: 768px) {

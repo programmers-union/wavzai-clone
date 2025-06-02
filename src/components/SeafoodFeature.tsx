@@ -71,6 +71,20 @@ export default function SeafoodShowcase() {
           ))}
         </div>
 
+     {/* ................. Mobile view............... */}
+
+     <div className="mobile-showcase d-block d-lg-none mt-5">
+  {rows.map((key, i) => {
+    const item = contentMap[key];
+    return (
+      <div key={i} className="mobile-card mb-4 p-3 bg-light rounded shadow-sm">
+        <img src={item.img} alt={item.title} className="w-100 rounded mb-3" />
+        <h4 className="text-dark">{item.title}</h4>
+        <p className="text-muted">{item.text}</p>
+      </div>
+    );
+  })}
+</div>
         <div className="sticky-card">
           {currentContent && (
             <div className={`card-content ${
