@@ -1,3 +1,4 @@
+
 import HeroSection from "@/components/HeroSection";
 import InstaGallerySection from "@/components/InstaGallerySection";
 import LogoCarousel from "@/components/LogoCarousel ";
@@ -6,6 +7,7 @@ import ReservationSection from "@/components/ReservationSection";
 import RestaurantSection from "@/components/RestaurantSection";
 import SeafoodRestaurant from "@/components/SeafoodRestaurant";
 import TeamSection from "@/components/TeamSection";
+import ArticlesTestimonials from "@/components/ArticlesTestimonials";
 
 const chefs1 = [
   {
@@ -90,7 +92,11 @@ export default async function Category({ params }: PageProps) {
       <div className="">
         <TeamSection members={chefs2} />
       </div>
-      <ReservationSection/>
+      <ArticlesTestimonials/>
+      <div className="py-4">
+           <ReservationSection/>
+      </div>
+     
       <InstaGallerySection/>
     </div>
   );
