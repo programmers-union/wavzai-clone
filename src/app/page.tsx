@@ -19,9 +19,13 @@ import InstaGallerySection from "@/components/InstaGallerySection";
 export default function Home() {
   return (
 <div className="">
+
 <HomeSection1/>
 <ScrollZoomImage />
-<SeafoodFeature/>
+<div className="py-3">
+ <SeafoodFeature/>
+</div>
+
  <SeafoodRestaurant />
  <MenuShowcaseSection/>
  <SeafoodServices/>
