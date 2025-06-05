@@ -259,207 +259,219 @@ html {
 
 
 
-/* Carousel Section Styles */
+/* Carousel Section Styles - Reduced Height */
 .carousel-section {
-          position: relative;
-          min-height: 150vh;
-          background: white;
-          overflow-x: hidden;
-          margin: 0 auto;
-          width: 97%;
-        }
+  position: relative;
+  min-height: 150vh; /* Back to original height to maintain design */
+  background: white;
+  overflow-x: hidden;
+  margin: 0 auto;
+  width: 97%;
+  margin-bottom: -50vh; /* Negative margin to remove bottom white space */
+}
 
-        .text-carousel {
-          position: relative;
-          z-index: 1;
-          display: flex;
-          flex-direction: column;
-          gap: 2rem;
-          padding: 2rem 0;
-        }
+.text-carousel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Back to original gap */
+  padding: 2rem 0; /* Back to original padding */
+}
 
-        .carousel-row {
-          display: flex;
-          white-space: nowrap;
-          font-size: 4rem;
-          font-weight: bold;
-          color: #dcdcdc;
-          animation: scroll-left 25s linear infinite;
-          transition: color 0.3s ease;
-          cursor: pointer;
-        }
+.carousel-row {
+  display: flex;
+  white-space: nowrap;
+  font-size: 4rem; /* Back to original size */
+  font-weight: bold;
+  color: #dcdcdc;
+  animation: scroll-left 25s linear infinite;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
 
-        .carousel-row.active {
-          color: #38c3f5;
-        }
+.carousel-row.active {
+  color: #38c3f5;
+}
 
-        .carousel-row:hover {
-          color: #38c3f5;
-        }
+.carousel-row:hover {
+  color: #38c3f5;
+}
 
-        .carousel-text {
-          margin-right: 2rem;
-          font-size: 5rem;
-        font-family: var(--font-anton); 
-        }
+.carousel-text {
+  margin-right: 2rem;
+  font-size: 5rem; /* Back to original size */
+  font-family: var(--font-anton); 
+}
 
-        @keyframes scroll-left {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
-        .sticky-card {
-          position: relative;
-          position: relative;
-          top: -39rem;
-          z-index: 2;
-          display: flex;
-          justify-content: center;
-          width: 26%;
-          margin: 0 auto;
-        }
+.sticky-card {
+  position: relative;
+  top: -39rem; /* Back to original position */
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  width: 26%;
+  margin: 0 auto;
+}
 
-        .card-content {
-          background: #001f4d;
-          color: white;
-          padding: 2.5rem 2rem;
-          
-          width: 100%;
-          
-          transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-          display: flex;
-          flex-direction: column;
-        }
+.card-content {
+  background: #001f4d;
+  color: white;
+  padding: 2.5rem 2rem; /* Back to original padding */
+  width: 100%;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
 
-        .card-content.transitioning-out {
-          transform: scale(0.95);
-        }
+.card-content.transitioning-out {
+  transform: scale(0.95);
+}
 
-        .card-content.transitioning-in {
-          transform: scale(1.05);
-          animation: cardZoomIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-        }
+.card-content.transitioning-in {
+  transform: scale(1.05);
+  animation: cardZoomIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
 
-        @keyframes cardZoomIn {
-          0% {
-            transform: scale(1.05);
-          }
-          100% {
-            transform: scale(1);
-          }
-        }
+@keyframes cardZoomIn {
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-        .card-header {
-          margin-bottom: 1rem;
-        }
+.card-header {
+  margin-bottom: 1rem; /* Back to original */
+}
 
-        .card-number {
-          color: #ffffff;
-          font-size: 0.9rem;
-          font-weight: 300;
-          opacity: 0.8;
-        }
+.card-number {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 300;
+  opacity: 0.8;
+}
 
-        .card-title {
-          font-size: 2.5rem;
-          font-weight: 300;
-          margin: 1rem 0;
-          line-height: 1.2;
-          color: #ffffff;
-          transition: opacity 0.3s ease;
-        }
+.card-title {
+  font-size: 2.5rem; /* Back to original */
+  font-weight: 300;
+  margin: 1rem 0; /* Back to original */
+  line-height: 1.2;
+  color: #ffffff;
+  transition: opacity 0.3s ease;
+}
 
-        .card-description {
-          font-size: 1rem;
-          line-height: 1.6;
-          color: #b8c5d6;
-          margin-bottom: 2rem;
-          flex-grow: 1;
-          transition: opacity 0.3s ease;
-        }
+.card-description {
+  font-size: 1rem; /* Back to original */
+  line-height: 1.6;
+  color: #b8c5d6;
+  margin-bottom: 2rem; /* Back to original */
+  flex-grow: 1;
+  transition: opacity 0.3s ease;
+}
 
-        .image-container {
-          width: 100%;
-          aspect-ratio: 1;
-          border-radius: 12px;
-          overflow: hidden;
-          background: #f8f9fa;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-top: auto;
-        }
+.image-container {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+}
 
-        .food-image {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-          transition: transform 0.3s ease;
-        }
+.food-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
 
-        .card-content:hover .food-image {
-          transform: scale(1.05);
-        }
+.card-content:hover .food-image {
+  transform: scale(1.05);
+}
 
-        .carousel-row:hover ~ .sticky-card .card-content {
-          transform: scale(1.02);
-        }
+.carousel-row:hover ~ .sticky-card .card-content {
+  transform: scale(1.02);
+}
 
-        /* Responsive Design */
-        @media (max-width: 991.98px) {
-          .card-content {
-            width: 320px;
-            min-height: 520px;
-            padding: 2rem 1.5rem;
-          }
-          
-          .card-title {
-            font-size: 2rem;
-          }
-          .text-carousel {
+/* Mobile Showcase Styles */
+.mobile-showcase {
+  padding: 1rem;
+}
+
+.mobile-card {
+  transition: transform 0.3s ease;
+}
+
+.mobile-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+  .carousel-section {
+    min-height: auto; /* Remove fixed height on mobile */
+    padding: 1rem 0;
+  }
+  
+  .text-carousel {
     display: none;
   }
+  
   .sticky-card {
     display: none !important;
   }
-        }
+  
+  .mobile-showcase {
+    display: block !important;
+  }
+}
 
-        @media (max-width: 768px) {
-          .carousel-row {
-            font-size: 2.5rem;
-          }
+@media (max-width: 768px) {
+  .carousel-row {
+    font-size: 2.5rem;
+  }
 
-          .card-content {
-            width: 90%;
-            max-width: 300px;
-            padding: 1.5rem;
-            min-height: 480px;
-          }
-          
-          .card-title {
-            font-size: 1.8rem;
-          }
-          
-          .card-description {
-            font-size: 0.9rem;
-          }
-        }
+  .card-content {
+    width: 90%;
+    max-width: 300px;
+    padding: 1.5rem;
+    min-height: 400px; /* Reduced height */
+  }
+  
+  .card-title {
+    font-size: 1.8rem;
+  }
+  
+  .card-description {
+    font-size: 0.9rem;
+  }
+}
 
-        @media (max-width: 575.98px) {
-          .card-content {
-            min-height: 420px;
-          }
-          
-          .card-title {
-            font-size: 1.6rem;
-          }
-        }
+@media (max-width: 575.98px) {
+  .card-content {
+    min-height: 350px; /* Further reduced height */
+  }
+  
+  .card-title {
+    font-size: 1.6rem;
+  }
+}
 
 
 
@@ -546,7 +558,7 @@ html {
 }
 
 .stat-number::after {
-  content: '';
+  /* content: ''; */
   position: absolute;
   right: -15px;
   top: 50%;
@@ -1384,7 +1396,7 @@ html {
 }
 
 .seafood-menu__items {
-  max-width: 600px;
+  max-width: 710px;
 }
 
 .seafood-menu__item {
@@ -1436,7 +1448,7 @@ html {
 
 .seafood-menu__price {
   color: #333;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -2030,7 +2042,7 @@ html {
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .hero-section-image {
@@ -2132,12 +2144,14 @@ html {
 
 .carousel-text-category {
   color: white;
-  font-size: 8rem;
+  font-size: 12rem;
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin: 0 40px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-top: 2rem;
+  
 }
 
 .carousel-separator {
