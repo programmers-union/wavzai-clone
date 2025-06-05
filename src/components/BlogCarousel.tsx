@@ -56,9 +56,9 @@ export default function BlogCarousel() {
   const getImage = (index: number) => blogData[(index + blogData.length) % blogData.length];
 
   return (
-    <div className="blogcarousel-section py-5 text-center position-relative">
-      <div className="container position-relative">
-        <div className="row justify-content-center align-items-end blogcarousel-image-row">
+    <div className="blogcarousel-section py-5 text-center ">
+      <div className="">
+        <div className="row justify-content-center  blogcarousel-image-row">
           {[currentIndex - 1, currentIndex, currentIndex + 1].map((i, idx) => {
             const blog = getImage(i);
             const isActive = i % blogData.length === currentIndex;
@@ -70,9 +70,9 @@ export default function BlogCarousel() {
                 <Image
                   src={blog.img}
                   alt={blog.title}
-                  width={600}
+                  width={1000}
                   height={400}
-                  className="img-fluid blogcarousel-image"
+                  className=" blogcarousel-image"
                 />
               </div>
             );
